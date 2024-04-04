@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* Кнопка index в шапке страницы */
+#index {
+    color: black;
+}
+
+/* Тело документа */
+body {
+    width: calc(100% - 200px);
+    margin: 0 100px;
+}
+
+/* Панель с кнопкой index */
+header {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Заголовки */
+h3 {
+    margin: 5px 0;
+}
+
+/* Основная секция */
+main {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 170px;
+    gap: 10px;
+}
+
+/* Формы */
+form {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Поля ввода */
+input {
+    width: calc(100% - 10px);
+    height: 30px;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    padding-left: 10px;
+
+    transition: 80ms ease-in-out;
+}
+input:focus {
+    outline: none;
+    outline-offset: none;
+
+    border-color: black;
+}
+
+/* Кнопки */
+button {
+    height: 40px;
+
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+
+    color: whitesmoke;
+    background-color: dodgerblue;
+}
+button:hover {
+    border-color: dimgray;
+    cursor: pointer;
+}
+
+/* Ссылки в виде кнопок */
+.a-button {
+    padding: 8px 20px;
+    margin: 5px 0;
+    text-align: center;
+
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+
+    color: whitesmoke;
+    background-color: dodgerblue;
+    text-decoration: none;
+
+    transition: 80ms ease-in-out;
+}
+.a-button:hover {
+    border-color: dimgray;
+}
+
+/* Разметка формы functions */
+#functions {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Сетка формы create-file */
+#create-file {
+    display: grid;
+    gap: 10px;
+}
+#create-file h3 {
+    grid-row: 1;
+    grid-column: span 2;
+}
+#filename {
+    grid-row: 2;
+    grid-column: 1;
+}
+#content {
+    grid-row: 2;
+    grid-column: 2;
+}
+#create-file button {
+    width: 100%;
+    grid-row: 3;
+    grid-column: span 2;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remote access</title>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <!-- Кнопка index перенаправляет на главную страницу -->
+        <a id="index" href="http://192.168.1.161:5000/"><h1>index</h1></a>
+    </header>
+    <main>
+        <!-- Форма для создания файла. В параметрах GET-запроса передаются его название и содержание -->
+        <form id="create-file" action="http://192.168.1.161:5000/create-file" method="get">
+            <h3>create file in files</h3>
+            <input name="filename" id="filename" type="text" placeholder="file.name">
+            <input name="content" id="content" type="text" placeholder="content">
+            <button type="submit">create file</button>
+        </form>
+
+        <!-- Форма для списка функций. Легко дополняется -->
+        <form id="functions">
+            <h3>functions</h3>
+            <a class="a-button" href="http://192.168.1.161:5000/music">music</a>
+            <a class="a-button" href="http://192.168.1.161:5000/openvscode">vs code</a>
+        </form>
+    </main>
+</body>
+</html>
